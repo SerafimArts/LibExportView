@@ -1,0 +1,31 @@
+{
+    "require": {
+        "php": "^8.1",
+        "ext-ffi": "*",
+        "ffi-headers/contracts": "^1.0",
+        "ffi/env": "^1.0",
+        "ffi/proxy": "^1.0",
+        "psr/event-dispatcher": "^1.0",
+        "psr/simple-cache": "^3.0",
+        "symfony/event-dispatcher": "^5.4|^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Serafim\\LibExportView\\": "src"
+        }
+    },
+    "require-dev": {
+        "ffi/ide-helper-generator": "^0.1.10",
+        "ffi/var-dumper": "^1.0",
+        "friendsofphp/php-cs-fixer": "^3.21",
+        "phpunit/phpunit": "^10.3",
+        "symfony/var-dumper": "^6.3",
+        "vimeo/psalm": "^5.14"
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

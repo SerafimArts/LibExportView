@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+require __DIR__ . '/vendor/autoload.php';
+
+$app = new \Serafim\LibExportView\Application();
+
+$window = $app->create();
+$window->setIcon(new \SplFileInfo(__DIR__ . '/resources/icon/x64.ico'));
+$window->show();
+$window->run();

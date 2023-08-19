@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<psalm
+    errorLevel="1"
+    findUnusedCode="false"
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+    findUnusedBaselineEntry="true"
+>
+    <projectFiles>
+        <directory name="libs/polyfill-fiber/src" />
+        <directory name="libs/rpc-client/src" />
+        <directory name="libs/rpc-client-attributes/src" />
+        <directory name="libs/rpc-client-generator/src" />
+        <directory name="libs/rpc-codec/src" />
+        <directory name="libs/rpc-codec-jsonrpc/src" />
+        <directory name="libs/rpc-hydrator-contracts/src" />
+        <directory name="libs/rpc-hydrator-jms/src" />
+        <directory name="libs/rpc-message/src" />
+        <directory name="libs/rpc-message-factory/src" />
+        <directory name="libs/rpc-metadata/src" />
+        <directory name="libs/rpc-server/src" />
+        <directory name="libs/rpc-transport/src" />
+        <directory name="libs/rpc-transport-amqp/src" />
+
+        <ignoreFiles>
+            <directory name="vendor" />
+        </ignoreFiles>
+    </projectFiles>
+</psalm>

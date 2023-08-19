@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+         colors="true"
+         backupGlobals="true"
+         stopOnFailure="false"
+         processIsolation="false"
+         backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+>
+    <coverage>
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+    </coverage>
+    <testsuites>
+        <testsuite name="bic-engine/async">
+            <directory>libs/async/tests</directory>
+        </testsuite>
+        <testsuite name="bic-engine/event-listener">
+            <directory>libs/event-listener/tests</directory>
+        </testsuite>
+        <testsuite name="bic-engine/foundation">
+            <directory>libs/foundation/tests</directory>
+        </testsuite>
+        <testsuite name="bic-engine/image">
+            <directory>libs/image/tests</directory>
+        </testsuite>
+        <testsuite name="bic-engine/image-converter">
+            <directory>libs/image-converter/tests</directory>
+        </testsuite>
+        <testsuite name="bic-engine/image-factory">
+            <directory>libs/image-factory/tests</directory>
+        </testsuite>
+        <testsuite name="bic-engine/keyboard">
+            <directory>libs/keyboard/tests</directory>
+        </testsuite>
+        <testsuite name="bic-engine/mouse">
+            <directory>libs/mouse/tests</directory>
+        </testsuite>
+        <testsuite name="bic-engine/renderer">
+            <directory>libs/renderer/tests</directory>
+        </testsuite>
+        <testsuite name="bic-engine/runner">
+            <directory>libs/runner/tests</directory>
+        </testsuite>
+        <testsuite name="bic-engine/scene">
+            <directory>libs/scene/tests</directory>
+        </testsuite>
+        <testsuite name="bic-engine/value-object">
+            <directory>libs/value-object/tests</directory>
+        </testsuite>
+        <testsuite name="bic-engine/window">
+            <directory>libs/window/tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <ini name="error_reporting" value="-1"/>
+        <ini name="memory_limit" value="-1"/>
+    </php>
+</phpunit>
