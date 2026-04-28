@@ -66,7 +66,7 @@ final class Text
         return 'UTF-16' . $suffix;
     }
 
-    public function decode(string $text, string $encoding = null): string
+    public function decode(string $text, ?string $encoding = null): string
     {
         return \rtrim(\mb_convert_encoding($text, $this->internalEncoding, $encoding ?? $this->externalEncoding), "\0");
     }
@@ -74,7 +74,7 @@ final class Text
     /**
      * @param non-empty-string|null $encoding
      */
-    public function wide(string $text, string $encoding = null, bool $owned = true): CData
+    public function wide(string $text, ?string $encoding = null, bool $owned = true): CData
     {
         $encoded = \mb_convert_encoding($text, $encoding ?? $this->externalEncoding, $this->internalEncoding);
 

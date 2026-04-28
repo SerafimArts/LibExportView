@@ -20,7 +20,7 @@
         "friendsofphp/php-cs-fixer": "^3.21",
         "phpunit/phpunit": "^10.3",
         "symfony/var-dumper": "^6.3",
-        "vimeo/psalm": "^5.14"
+        "vimeo/psalm": "^5.14|^6.0"
     },
     "config": {
         "sort-packages": true,

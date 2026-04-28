@@ -26,7 +26,7 @@ final class TypedStream implements StreamInterface
      * @param StreamInterface $stream
      * @param bool|null $le
      */
-    public function __construct(StreamInterface $stream, bool $le = null)
+    public function __construct(StreamInterface $stream, ?bool $le = null)
     {
         $this->stream = $stream;
         $this->le = $le ?? (\unpack('S', "\x01\x00")[1] === 1);
@@ -115,7 +115,7 @@ final class TypedStream implements StreamInterface
      * @param bool|null $le
      * @return positive-int|0
      */
-    public function uint16(bool $le = null): int
+    public function uint16(?bool $le = null): int
     {
         $le ??= $this->le;
 
@@ -134,7 +134,7 @@ final class TypedStream implements StreamInterface
      * @param bool|null $le
      * @return positive-int|0
      */
-    public function uint32(bool $le = null): int
+    public function uint32(?bool $le = null): int
     {
         $le ??= $this->le;
 
@@ -153,7 +153,7 @@ final class TypedStream implements StreamInterface
      * @param bool|null $le
      * @return positive-int|0
      */
-    public function uint64(bool $le = null): int
+    public function uint64(?bool $le = null): int
     {
         $le ??= $this->le;
 
@@ -164,7 +164,7 @@ final class TypedStream implements StreamInterface
      * @param bool|null $le
      * @return float
      */
-    public function float32(bool $le = null): float
+    public function float32(?bool $le = null): float
     {
         $le ??= $this->le;
 
@@ -175,7 +175,7 @@ final class TypedStream implements StreamInterface
      * @param bool|null $le
      * @return float
      */
-    public function float64(bool $le = null): float
+    public function float64(?bool $le = null): float
     {
         $le ??= $this->le;
 
@@ -186,7 +186,7 @@ final class TypedStream implements StreamInterface
      * @param bool|null $le
      * @return \DateTimeInterface
      */
-    public function timestamp(bool $le = null): \DateTimeInterface
+    public function timestamp(?bool $le = null): \DateTimeInterface
     {
         $timestamp = $this->uint32($le);
 
